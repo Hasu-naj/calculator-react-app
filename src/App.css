@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: #FF99FF;
+}
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+    background-color: #FFFFFF;
+}
+
+#clear {
+    grid-column: 1/3;
+    background: #CC00CC; 
+}
+
+#result {
+    grid-column: 3/5;
+  background: #CC00CC;
+}
+
+#backspace {
+    background: #CC00CC;
+}
+
+#opt{
+    background: #CC00CC;
+}
+
+
+.output {
+    grid-column: 1 /-1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: .75rem;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, .75);
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
